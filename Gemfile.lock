@@ -75,6 +75,8 @@ GEM
       irb (>= 1.3.6)
       reline (>= 0.3.1)
     erubi (1.11.0)
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -108,6 +110,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.4)
@@ -154,8 +158,10 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  faker
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.4)
   tzinfo-data
 
