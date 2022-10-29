@@ -1,50 +1,47 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: %i[ show update destroy ]
+  before_action :set_profile, only: [:show, :update, :destroy]
 
-  # GET /profiles
   def index
-    @profiles = Profile.all
-
-    render json: @profiles
+    render json: get_profiles 
   end
 
-  # GET /profiles/1
   def show
     render json: @profile
   end
 
-  # POST /profiles
   def create
     @profile = Profile.new(profile_params)
 
     if @profile.save
-      render json: @profile, status: :created, location: @profile
+      render json: get_profiles, status: :created, location: @profiles
     else
       render json: @profile.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /profiles/1
   def update
     if @profile.update(profile_params)
-      render json: @profile
+      render json: get_profiles
     else
       render json: @profile.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /profiles/1
   def destroy
     @profile.destroy
+    render json: get_profiles 
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+    def get_profiles
+      Profile.order('created_at DESC')
+    end
+
     def set_profile
       @profile = Profile.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :dob, :job_title)
     end
