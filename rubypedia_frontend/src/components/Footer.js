@@ -1,7 +1,7 @@
 function Footer(props) {
   return (
     <footer>
-      <h1>Footer</h1>
+      <h1>All Rights Reserved, &copy; 2022 RubyPedia</h1>
     </footer>
   );
 }

@@ -1,7 +1,7 @@
 function Header(props) {
   return (
     <header>
-      <h1>Notices</h1>
+      <h1>RubyPedia</h1>
     </header>
   );
 }
