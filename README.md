@@ -9,7 +9,7 @@ RubyPedia is a full crud application where a user can view, add, update, or dest
 * Ruby 
 * Rails 
 * React
-* PostgreSQL 
+* PostgreSQL  
 * Materialize
 
 
@@ -17,9 +17,9 @@ RubyPedia is a full crud application where a user can view, add, update, or dest
 # Images
 <img src="https://user-images.githubusercontent.com/110005039/198841790-a463d85b-c30a-4d1f-a17b-bfc52d8c28a8.png">
 
-
+ 
 # Future Plans
-* Touch up on CSS more
+* Touch up on CSS more 
 * Make the application have multiple pages rather than just the single page app it currently is. 
 
 # About The Author
