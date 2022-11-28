@@ -6,10 +6,10 @@ RubyPedia is a full crud application where a user can view, add, update, or dest
 
 # Technologies Used
 
-* Ruby
-* Rails
+* Ruby 
+* Rails 
 * React
-* PostgreSQL
+* PostgreSQL 
 * Materialize
 
 
